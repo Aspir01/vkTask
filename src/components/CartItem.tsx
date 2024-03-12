@@ -11,7 +11,6 @@ const CartItem: React.FC<CartItemProps> = ({ item }) => {
 
     return (
         <div className="cart-item">
-            <img src={item.image} alt={item.name} />
             <div className="cart-item-details">
                 <h2>{item.name}</h2>
                 <p>{item.description}</p>

@@ -10,10 +10,8 @@ const CartList: React.FC = () => {
     const cartItems = useSelector((state: RootState) => state.cart.items);
 
     useEffect(() => {
-        // Загрузка данных корзины с использованием axios из API
         axios.get('https://dummyjson.com/carts/1')
             .then(response => {
-                // Предположим, что данные API соответствуют интерфейсу CartItem[]
                 const items: CartItemType[] = response.data.products.map((product: any) => ({
                     id: product.id,
                     name: product.title,
@@ -22,7 +20,7 @@ const CartList: React.FC = () => {
                     price: product.price,
                     total: product.total,
                 }));
-                dispatch(setCartItems(items)); // Обновление состояния корзины в Redux
+                dispatch(setCartItems(items));
             })
             .catch(error => {
                 console.error('Error fetching cart items:', error);
