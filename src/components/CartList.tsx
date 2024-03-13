@@ -15,10 +15,11 @@ const CartList: React.FC = () => {
                 const items: CartItemType[] = response.data.products.map((product: any) => ({
                     id: product.id,
                     name: product.title,
-                    description: product.description,
+                    discount: product.discountPercentage,
                     quantity: product.quantity,
                     price: product.price,
                     total: product.total,
+                    img: product.thumbnail
                 }));
                 dispatch(setCartItems(items));
             })

@@ -5,9 +5,11 @@ export interface CartItem {
     id: number;
     name: string;
     description: string;
+    discount: number,
     quantity: number;
     price: number;
     total: number;
+    img: string
 }
 
 interface CartState {

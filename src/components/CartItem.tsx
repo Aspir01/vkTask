@@ -11,19 +11,20 @@ const CartItem: React.FC<CartItemProps> = ({ item }) => {
 
     return (
         <div className="cart-item">
-            <div className="cart-item-details">
-                <h2>{item.name}</h2>
-                <p>{item.description}</p>
-                <div className="cart-item-actions">
-                    {/* Кнопки для изменения количества и удаления товара */}
-                </div>
+            <img src={item.img} alt="фото товаров" />
+            <div className="item-about">
+                <h3>{item.name}</h3>
+                <p>Скидка: {item.discount}%</p>
+                <p>Цена за 1 штуку: <b>{item.price}</b> руб.</p>
             </div>
             <div className="cart-item-quantity">
-                {item.quantity}
+                <p><b>{item.quantity}</b> шт.</p>
+                <div className='btns'>
+                    <button>+</button>
+                    <button>-</button>
+                </div>
             </div>
-            <div className="cart-item-price">
-                {item.price} руб.
-            </div>
+            <p>Итого <b>{item.total}</b> руб.</p>
         </div>
     );
 };
