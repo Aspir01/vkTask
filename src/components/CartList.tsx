@@ -29,7 +29,7 @@ const CartList: React.FC = () => {
     }, [dispatch]);
 
     return (
-        <div className="cart-list">
+        <div className="cart-list-container">
             {cartItems.map(item => (
                 <CartItem key={item.id} item={item} />
             ))}

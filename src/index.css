@@ -34,9 +34,8 @@ button {
   justify-content: space-between;
   margin: 10px 0;
   padding: 20px;
-  border: 5px solid #0073AB;
-  border-radius: 10px;
-  width: 600px;
+  height: 100px;
+  width: 550px;
 }
 
 .cart-item img {
@@ -55,4 +54,36 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+}
+
+.btns {
+  margin: 2px 0;
+  width: 70px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btns button {
+  border: none;
+  border-radius: 10px;
+  width: 30px;
+  height: 30px;
+}
+
+.plus {
+  background-color: #5bdd5b;
+}
+
+.plus:hover {
+  color: white;
+  background-color: #247024;
+}
+
+.minus {
+  background-color: #dd5b6f;
+}
+
+.minus:hover {
+  color: white;
+  background-color: #7e2734;
 }

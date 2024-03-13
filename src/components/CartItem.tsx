@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { CartItem as CartItemType } from '../store/cartSlice';
+import { CartItem as CartItemType, addItem, deleteItem } from '../store/cartSlice';
 
 interface CartItemProps {
     item: CartItemType;
@@ -17,11 +17,11 @@ const CartItem: React.FC<CartItemProps> = ({ item }) => {
                 <p>Скидка: {item.discount}%</p>
                 <p>Цена за 1 штуку: <b>{item.price}</b> руб.</p>
             </div>
-            <div className="cart-item-quantity">
+            <div>
                 <p><b>{item.quantity}</b> шт.</p>
                 <div className='btns'>
-                    <button>+</button>
-                    <button>-</button>
+                    <button className='plus' onClick={() => dispatch(addItem(item.id))}>+</button>
+                    <button className='minus' onClick={() => dispatch(deleteItem(item.id))}>-</button>
                 </div>
             </div>
             <p>Итого <b>{item.total}</b> руб.</p>
