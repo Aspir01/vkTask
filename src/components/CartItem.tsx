@@ -29,4 +29,4 @@ const CartItem: React.FC<CartItemProps> = ({ item }) => {
     );
 };
 
-export default CartItem;
+export default CartItem;    

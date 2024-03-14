@@ -7,7 +7,7 @@ const TotalAmount: React.FC = () => {
 
     return (
         <div className="total-amount">
-            Итого: {totalAmount} руб.
+            {totalAmount === 0 ? "" : <h3>Итого: {totalAmount} руб.</h3>}
         </div>
     );
 };

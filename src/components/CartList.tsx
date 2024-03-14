@@ -33,6 +33,7 @@ const CartList: React.FC = () => {
             {cartItems.map(item => (
                 <CartItem key={item.id} item={item} />
             ))}
+            {cartItems.length === 0 && <h2>Загрузка...</h2>}
         </div>
     );
 };
