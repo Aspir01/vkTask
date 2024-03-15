@@ -1,4 +1,5 @@
 import React from 'react';
+import "./CartItem.css";
 import { useDispatch } from 'react-redux';
 import { CartItem as CartItemType, addItem, deleteItem } from '../store/cartSlice';
 
@@ -24,7 +25,7 @@ const CartItem: React.FC<CartItemProps> = ({ item }) => {
                     <button className='minus' onClick={() => dispatch(deleteItem(item.id))}>-</button>
                 </div>
             </div>
-            <p>Итого <b>{item.total}</b> руб.</p>
+            <p className='quant'>Итого <b>{item.total}</b> руб.</p>
         </div>
     );
 };

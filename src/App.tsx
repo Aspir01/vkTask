@@ -9,10 +9,8 @@ const App: React.FC = () => {
   return (
     <Provider store={store}>
       <div className="App">
-        <div className="cart-container">
-          <CartList />
-          <TotalAmount />
-        </div>
+        <CartList />
+        <TotalAmount />
       </div>
     </Provider>
   );

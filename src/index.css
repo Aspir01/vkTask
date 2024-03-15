@@ -11,13 +11,11 @@ button {
 .App {
   display: flex;
   justify-content: center;
-  padding: 2rem;
+  padding: 1rem 0;
 }
 
 .cart-container {
   display: flex;
-  flex-direction: row;
-  gap: 2rem;
 }
 
 .cart-list-container {
@@ -26,64 +24,4 @@ button {
 
 .total-amount-container {
   flex: 1;
-}
-
-.cart-item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: 10px 0;
-  padding: 20px;
-  height: 100px;
-  width: 550px;
-}
-
-.cart-item img {
-  width: 100px;
-  height: 100px;
-  border-radius: 10px;
-}
-
-.cart-item h3 {
-  display: inline-block;
-  width: 200px;
-}
-
-.item-about {
-  height: 80px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
-
-.btns {
-  margin: 2px 0;
-  width: 70px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.btns button {
-  border: none;
-  border-radius: 10px;
-  width: 30px;
-  height: 30px;
-}
-
-.plus {
-  background-color: #5bdd5b;
-}
-
-.plus:hover {
-  color: white;
-  background-color: #247024;
-}
-
-.minus {
-  background-color: #dd5b6f;
-}
-
-.minus:hover {
-  color: white;
-  background-color: #7e2734;
 }
